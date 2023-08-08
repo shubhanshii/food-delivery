@@ -5,8 +5,6 @@ import Notification from './components/Notification'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -24,8 +22,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Notification/>
         <Navbar/>
-        {children}</body>
+        {children}
         <Footer/>
+        </body>
     </html>
   )
 }

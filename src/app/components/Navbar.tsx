@@ -1,18 +1,23 @@
+"use client";
 import React from 'react'
 import Menu from "./Menu";
 import Link from "next/link";
 import CartIcon from './CartIcon';
 import Image from 'next/image';
+import Logout from '../logout/page';
+
 
 const Navbar = () => {
 
   const user= false;
   return (
+    
     <div className='h-12 text-red-500 p-4 flex items-center justify-between border-b-2 border-b-red-500 uppercase  md:h-24 lg:px-20 xl:px-40 overflow-y-hidden'>
       <div className="hidden md:flex gap-4 flex-1">
       <Link href="/">Homepage</Link>
         <Link href="/menu">Menu</Link>
         <Link href="/orders">Orders</Link>
+       <Link href="./logout">Logout</Link>
       </div>
       <div className='text-xl md:font-bold flex-1 md:text-center'>
         <Link href="/">
@@ -35,6 +40,7 @@ const Navbar = () => {
         <Link href="/orders">Orders</Link>)}
     
     <CartIcon/>
+    
       </div>
     </div>
   )
